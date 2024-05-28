@@ -1,0 +1,73 @@
+@startuml TicTacToe
+
+class Game {
+    playerOne : Player
+    playerTwo : Player
+    currentPlayer: Player
+    board : Board
+    userInput : UserInput
+    translator : Translator
+    outputPrinter : OutputPrinter
+
+    start() : void
+    checkForLanguageChange(userInput: String) : boolean
+    switchPlayer() : void
+}
+
+class Player {
+    playerId : int
+    name : String
+}
+
+class Board {
+    currentBoard : List
+
+    updateBoard(newPosition: int, currentPlayer : Player) : boolean
+    validateMove(selectedPosition: int) : boolean
+    checkGameState() : int
+    getWinner(player1: Player, player2: Player) : Player
+    getLoser(player1: Player, player2: Player) : Player
+}
+
+class Translator {
+    translationsLang1 : Map<String, String> 
+    translationsLang2 : Map<String, String>
+    languages : Array<String>
+    currentLanguage : String
+
+    translate(toBeTranslated: String) : String
+}
+
+class UserInput {
+    scanner : Scanner
+
+    getUserInput() : String
+}
+
+class OutputPrinter {
+    translator : Translator
+    printInstructions() : void
+    printBoard(board: Board) : void
+    printGameEndedWithWin(winner: Player, looser: Player) : void
+    printGameEndedWithStalemate(board: Board) : void
+    printInvalidMove(coordinate : int) : void
+    printChangeLanguage() : void
+}
+
+OutputPrinter ..> Board
+
+OutputPrinter ..> Translator
+
+OutputPrinter ..> Player
+
+Game ..> Player
+
+Game ..> Board
+
+Game ..> UserInput
+
+Game ..> OutputPrinter
+
+Board ..> Player
+
+@enduml
