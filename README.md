@@ -1,18 +1,12 @@
-# team2-numeroUNO-projekt1-tic-tac-toe
+# Tic-Tac-Toe (Student Programming Project December 2023)
 
-Contributors:
-- Julien
-- Levin
-- Michael
-- Moritz
-
-# How to start the game
+## How to start the game
 To start the game, you have to run the main method in the Main class of the Project. <br />
 
-# How to run the Unit Tests
+## How to run the Unit Tests
 To run the Unit Tests, you can right-click on the test folder and select "Run 'Tests in 'testing''". <br />
 
-# Game Instructions
+## Game Instructions
 To play the game, you have to enter the number of the field you want to place your symbol in. <br />
                 The field-numbers are as follows: <br />
                 """<br />
@@ -30,7 +24,7 @@ To play the game, you have to enter the number of the field you want to place yo
                 To exit the game, enter:<br />
                     exit<br />
                 
-# Game flow
+## Game flow
 The game starts by asking the user which language is preferred (german / english). <br />
 The user can then select if he wants to play in Singleplayer mode or in Multiplayer moder.<br />
 In the singelplayer mode the player can choose between two difficulty settings (easy / hard) <br />
@@ -44,7 +38,7 @@ In order to change between the two Gamemodes, the difficulty settings (in Singel
 In most situations can the command "help" be used to show the Game Instructions and valid inputs.<br />
 Also in most situations can the command "exit" be used to leave the game.<br />
 
-# Classmodell
+## Classmodell
 
 [Klassenmodell](./documentation/Klassendiagramm/Klassenmodell.md)
 
@@ -89,9 +83,11 @@ Description of the new / changed classes:<br />
    Opponent Does not interact with any other class. is simply called.<br />
 
 
-# Testingkonzept
+## Testingkonzept
 
 [Testingkonzept](./documentation/Klassendiagramm/testingconcept.md)
 
 Note:
 In this code println together with \n is used.
+
+This is a copy of my group project work, which was carried out at the Zurich University of Applied Sciences (ZHAW)
